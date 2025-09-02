@@ -25,3 +25,15 @@ SELECT
     END AS ValidationTelephone
 FROM Contact.Contact
 WHERE Phone IS NOT NULL;
+
+
+-- Analyser la complexité des emails
+SELECT 
+    ContactId,
+    Email,
+    REGEXP_COUNT(Email, '[A-Z]') AS MajusculeCount,
+    REGEXP_COUNT(Email, '[a-z]') AS MinusculeCount,
+    REGEXP_COUNT(Email, '[0-9]') AS ChiffreCount,
+    REGEXP_COUNT(Email, '[^A-Za-z0-9@.]') AS SpecialCharCount
+FROM Contact.Contact
+WHERE Email IS NOT NULL;
