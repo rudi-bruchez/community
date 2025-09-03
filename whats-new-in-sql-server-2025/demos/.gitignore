@@ -1,0 +1,14 @@
+.env
+.venv/
+FileContentIndex/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+*.lock
+*.log

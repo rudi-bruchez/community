@@ -1,0 +1,12 @@
+flowchart LR
+    TID[X Lock on TID]:::main
+    R1[Update Row 1<br/>Short lock → released]:::row
+    R2[Update Row 2<br/>Short lock → released]:::row
+    Rn[Update Row N<br/>Short lock → released]:::row
+    Commit[Commit<br/>Release X lock on TID]:::theend
+
+    TID --> R1 --> R2 --> Rn --> Commit
+
+    classDef main fill:#ffddcc,stroke:#cc6600,stroke-width:2px,color:#000;
+    classDef row fill:#e6f0ff,stroke:#3366cc,stroke-width:1px,color:#000;
+    classDef theend fill:#ccffcc,stroke:#009933,stroke-width:2px,color:#000;
