@@ -2,6 +2,7 @@
 -- Demonstration script for new regex functions in SQL Server 2025
 -- Database: pachadatatraining
 -- Table: Contact.Contact
+-- test it at : https://regex101.com/ (use Golang flavor)
 -- =====================================================================
 
 -- Set compatibility level 170 (SQL Server 2025)
@@ -19,7 +20,7 @@ SELECT
     ContactId,
     Email,
     CASE
-        WHEN REGEXP_LIKE(Email, '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$')
+        WHEN REGEXP_LIKE(Email, '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$')
         THEN 'Email valid'
         ELSE 'Email invalid'
     END AS ValidationEmail

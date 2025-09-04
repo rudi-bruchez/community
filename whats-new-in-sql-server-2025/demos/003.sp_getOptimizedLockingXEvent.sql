@@ -8,17 +8,17 @@ BEGIN
 
     -- Query the histogram data collected by the 'laq' Extended Events session
     ;WITH t AS (
-        SELECT 
+        SELECT
             CAST(target_data AS XML) AS xml_data
-        FROM sys.dm_xe_sessions s 
-    JOIN sys.dm_xe_session_targets t 
+        FROM sys.dm_xe_sessions s
+    JOIN sys.dm_xe_session_targets t
         ON s.address = t.event_session_address
-    WHERE s.name = 'OptimizedLocking' 
+    WHERE s.name = 'OptimizedLocking'
     AND t.target_name = 'histogram'
     ),
     h AS (
         -- Extract lock mode and count from the XML histogram data
-        SELECT 
+        SELECT
             x.value('(value)[1]', 'VARCHAR(50)') as lock_mode,
             x.value('@count', 'bigint') as [count]
         FROM t
@@ -33,7 +33,7 @@ BEGIN
         WHERE name = 'lock_mode' -- Only include lock_mode mappings
     )
     -- Display the lock mode and count, sorted by count descending
-    SELECT 
+    SELECT
         --h.lock_mode,
         mv.map_value AS lock_mode,
         h.[count]
