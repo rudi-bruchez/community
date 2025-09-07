@@ -1,3 +1,7 @@
+-- Demo: SQL Server 2025 Installation Script
+-- This script restores the demo database from a backup file.
+-- It sets the compatibility level and enables preview features required for the demos.
+-- Run this script first to prepare the environment for all subsequent demos.
 USE [master]
 
 RESTORE DATABASE [PachadataTraining] 

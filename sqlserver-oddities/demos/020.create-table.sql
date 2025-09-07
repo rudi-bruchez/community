@@ -51,10 +51,12 @@ FROM STRING_SPLIT(@cols, '>, <') cols
         ON REGEXP_LIKE(c.col, v.s)
 )
 SELECT 
-    CONCAT('CREATE TABLE dbo complaint'
-    TRIM(', ' + CHAR(13) FROM STRING_AGG(col, ', ' + CHAR(13)) WITHIN GROUP (ORDER BY ordinal))
+    CONCAT('CREATE TABLE dbo complaint (', CHAR(13),
+    STRING_AGG(col, ', ' + CHAR(13)) WITHIN GROUP (ORDER BY ordinal), CHAR(13), ');')
     --TRIM(', ' + CHAR(13) FROM STRING_AGG(col, ', ' + CHAR(13)) WITHIN GROUP (ORDER BY ordinal)) -- non regex ?
-FROM cte4;
+FROM cte4
+FOR XML PATH('')
+;
 --ORDER BY c.ordinal;
 
 /*

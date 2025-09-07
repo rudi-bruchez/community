@@ -1,0 +1,93 @@
+USE PachadataTraining;
+GO
+
+ALTER DATABASE [PachadataTraining] SET COMPATIBILITY_LEVEL = 170;
+GO
+
+ALTER DATABASE SCOPED CONFIGURATION SET PREVIEW_FEATURES = ON;
+ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK_FOR_EXPRESSIONS = OFF;
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZED_SP_EXECUTESQL = ON;
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIONAL_PARAMETER_OPTIMIZATION = OFF;
+GO
+
+
+ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK_FOR_EXPRESSIONS = ON;
+GO
+
+-- expressions
+SELECT COUNT(DISTINCT Mobile)
+FROM Contact.Contact
+WHERE TRIM(UPPER(LastName)) = 'Feragotto';
+GO
+
+SELECT *
+FROM Contact.Contact c
+JOIN Enrollment.Enrollment e ON c.ContactId = e.ContactId
+WHERE e.DateCreation BETWEEN '20250101' AND '20250201'
+-- simple containement vs base containement
+GO
+
+ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = OFF;
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIONAL_PARAMETER_OPTIMIZATION = OFF;
+GO
+
+
+CREATE OR ALTER PROCEDURE Contact.SearchContacts
+	@lastname varchar(50) = NULL,
+	@FirstName varchar(50) = NULL
+AS BEGIN
+	SET NOCOUNT ON;
+
+	SELECT Lastname, FirstName, Email
+	FROM Contact.Contact c
+	WHERE (Lastname  = @Lastname OR @Lastname IS NULL)	
+	AND	  (FirstName = @FirstName OR @FirstName IS NULL);
+END;
+GO
+
+CREATE INDEX ix_Contact_FirstName on Contact.Contact (FirstName);
+GO
+
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
+GO
+
+EXEC Contact.SearchContacts @FirstName = 'Marimoto';
+GO
+EXEC Contact.SearchContacts @lastname = 'Dabrowski';
+GO
+
+EXEC Contact.SearchContacts @lastname = 'Dabrowski' WITH RECOMPILE;
+GO
+
+ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SENSITIVE_PLAN_OPTIMIZATION = ON;
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIONAL_PARAMETER_OPTIMIZATION = ON;
+GO
+
+
+CREATE OR ALTER PROCEDURE Contact.SearchContacts
+	@lastname varchar(50) = NULL,
+	@FirstName varchar(50) = NULL,
+	@Email varchar(100) = NULL
+AS BEGIN
+	SET NOCOUNT ON;
+
+	SELECT Lastname, FirstName, Email
+	FROM Contact.Contact c
+	WHERE (Lastname  = @Lastname  OR @Lastname  IS NULL)	
+	AND	  (FirstName = @FirstName OR @FirstName IS NULL)
+	AND	  (Email     = @Email     OR @Email     IS NULL);
+END;
+GO
+
+CREATE INDEX ix_Contact_Email on Contact.Contact (Email);
+GO
+
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
+GO
+
+EXEC Contact.SearchContacts @email = 'z.hubert@valoan.com';
+GO
+EXEC Contact.SearchContacts @FirstName = 'Marimoto';
+GO
+EXEC Contact.SearchContacts @lastname = 'Dabrowski';
+GO

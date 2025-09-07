@@ -1,11 +1,24 @@
---USE PachadataTraining;
+-- Demo: VECTOR Data Type in SQL Server 2025
+-- This script creates a new database and a table with the VECTOR data type.
+-- It demonstrates how to store embeddings (vectorized data) for AI/ML scenarios.
+-- Sample data is inserted to show how vectors are stored.
 
-CREATE DATABASE VectorDemo;
+CREATE DATABASE [VectorDemo]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'VectorDemo', FILENAME = N'/var/opt/mssql/data/VectorDemo.mdf' , SIZE = 262144KB , FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'VectorDemo_log', FILENAME = N'/var/opt/mssql/data/VectorDemo_log.ldf' , SIZE = 65536KB , FILEGROWTH = 65536KB )
+ WITH LEDGER = OFF
+GO
+ALTER DATABASE [VectorDemo] SET COMPATIBILITY_LEVEL = 170
+ALTER DATABASE [VectorDemo] SET RECOVERY SIMPLE 
+ALTER DATABASE [VectorDemo] SET DELAYED_DURABILITY = FORCED 
 GO
 
-USE [VectorDemo]; -- Pre-created database
 
--- Step 1: Create table with vector column
+USE [VectorDemo];
+
 CREATE TABLE ProductCatalog (
     ProductID INT IDENTITY(1,1) PRIMARY KEY,
     Name NVARCHAR(255),
@@ -15,7 +28,6 @@ CREATE TABLE ProductCatalog (
     -- https://openai.com/index/new-and-improved-embedding-model/
 );
 
--- Insert sample data (embeddings pre-generated for demo)
 INSERT INTO ProductCatalog (Name, Description, DescriptionEmbedding) VALUES 
 ('Gaming Laptop Pro', 'High-performance laptop with RTX 4080, perfect for gaming and streaming', 
  VECTOR('[0.123, 0.456, 0.789, ...]')), -- Truncated for presentation

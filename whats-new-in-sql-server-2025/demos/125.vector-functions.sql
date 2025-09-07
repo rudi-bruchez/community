@@ -1,3 +1,7 @@
+-- Demo: Vector Functions and Search in SQL Server 2025
+-- This script demonstrates built-in vector functions, normalization, and similarity search.
+-- It shows how to use VECTORPROPERTY, VECTOR_NORMALIZE, and VECTOR_SEARCH for AI/ML workloads.
+-- The script also includes index creation for efficient vector search.
 USE [VectorDemo];
 GO
 
@@ -8,6 +12,9 @@ SELECT TOP 1 *,
 FROM [dbo].[verses];
 GO
 
+SELECT TOP 10 * FROM verses;
+
+ALTER DATABASE SCOPED CONFIGURATION SET PREVIEW_FEATURES = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET PREVIEW_FEATURES = ON;
 GO
 
@@ -17,9 +24,8 @@ SELECT @v = [verse_embedding]
 FROM [dbo].[verses] v1
 WHERE v1.verse = 'And tyrannizing was the lady''s look,';
 
--- you cannot search without an index ...
 SELECT
-  v.verse,
+  v.verse_embedding,
   r.distance
 FROM
   VECTOR_SEARCH(
@@ -29,6 +35,7 @@ FROM
     METRIC = 'cosine',
     TOP_N = 10
   ) AS r
+WHERE r.verse <> 'BOOK I.'
 ORDER BY
   r.distance;
 GO
@@ -67,9 +74,15 @@ GO
 -- Semantic search using VECTOR_DISTANCE
 DECLARE @v as VECTOR(384);
 
-SELECT @v = VECTOR_NORMALIZE ([verse_embedding], 'norm2' )
+SELECT @v = [verse_embedding]
 FROM [dbo].[verses] v1
 WHERE v1.verse = 'And tyrannizing was the lady''s look,';
+
+SELECT VECTOR_NORM(@v, 'norm2') as magnitude_before;
+
+SET @v = VECTOR_NORMALIZE (@v, 'norm2' )
+
+SELECT VECTOR_NORM(@v, 'norm2') as magnitude_after;
 
 SELECT TOP 10
     *,
@@ -77,5 +90,3 @@ SELECT TOP 10
     VECTOR_DISTANCE('cosine', verse_embedding, @v) as Similarity
 FROM [dbo].[verses] AS v
 ORDER BY Similarity ASC;
-  
---SELECT AI_GENERATE_EMBEDDING(N'Pink Floyd music style' USE MODEL Ada2Embeddings);
