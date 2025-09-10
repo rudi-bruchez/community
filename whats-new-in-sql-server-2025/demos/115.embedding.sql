@@ -1,9 +1,11 @@
--- Turn external REST endpoint invocation ON in the database
+-- Demo: Storing and Using Embeddings with External REST Endpoints
+-- This script enables external REST endpoint invocation and sets up credentials for Azure OpenAI.
+-- It creates an external model for embedding generation and a table for storing text chunks.
+-- The demo shows how to integrate SQL Server with Azure OpenAI for AI-powered features.
 EXECUTE sp_configure 'external rest endpoint enabled', 1;
 RECONFIGURE WITH OVERRIDE;
 GO
 
--- Create a master key for the database
 IF NOT EXISTS (SELECT *
                FROM sys.symmetric_keys
                WHERE [name] = '##MS_DatabaseMasterKey##')
@@ -12,12 +14,10 @@ IF NOT EXISTS (SELECT *
     END
 GO
 
--- Create access credentials to Azure OpenAI using a key:
 CREATE DATABASE SCOPED CREDENTIAL [https://my-azure-openai-endpoint.openai.azure.com/]
     WITH IDENTITY = 'HTTPEndpointHeaders', secret = '{"api-key":"YOUR_AZURE_OPENAI_KEY"}';
 GO
 
--- Create an external model to call the Azure OpenAI embeddings REST endpoint
 CREATE EXTERNAL MODEL MyAzureOpenAiModel
 WITH (
       LOCATION = 'https://my-azure-openai-endpoint.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15',
@@ -27,7 +27,6 @@ WITH (
       CREDENTIAL = [https://my-azure-openai-endpoint.openai.azure.com/]
 );
 
--- Create a table with text to chunk and insert data
 CREATE TABLE textchunk
 (
     text_id INT IDENTITY (1, 1) PRIMARY KEY,

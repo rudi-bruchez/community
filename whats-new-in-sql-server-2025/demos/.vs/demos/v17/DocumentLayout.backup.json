@@ -1,0 +1,180 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\265.optimized-locking-LAQ.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:265.optimized-locking-LAQ.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\250.optimized-locking_lock-something-else.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:250.optimized-locking_lock-something-else.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\260.optimized-locking-without LAQ.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:260.optimized-locking-without LAQ.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\240.optimized-locking-see-tid.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:240.optimized-locking-see-tid.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\230.optimized-locking-tid.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:230.optimized-locking-tid.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\220.optimized-locking-without.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:220.optimized-locking-without.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\125.vector-functions.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:125.vector-functions.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\122.vector-content.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:122.vector-content.sql||{B5A506EB-11BE-4782-9A18-21265C2CA0B4}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ed7d6f85-175b-4b57-9887-71fe8b865fc8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{956e1b22-878b-499b-ac5c-2705c05370ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{956e1b22-878b-499b-ac5c-2705c05370ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{ed7d6f85-175b-4b57-9887-71fe8b865fc8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{956e1b22-878b-499b-ac5c-2705c05370ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f3feea-a56f-40f5-9ad6-b85f135d419a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3eb44d79-dda1-4580-b810-0808975173e4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{69b600ca-607b-4b9e-8d51-1df1ff909b7e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "265.optimized-locking-LAQ.sql - localhost,5434.PachadataTraining (sa (59))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\265.optimized-locking-LAQ.sql",
+              "RelativeDocumentMoniker": "265.optimized-locking-LAQ.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\265.optimized-locking-LAQ.sql - localhost,5434.PachadataTraining (sa (59))",
+              "RelativeToolTip": "265.optimized-locking-LAQ.sql - localhost,5434.PachadataTraining (sa (59))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T08:00:46.7Z",
+              "EditorCaption": " - localhost,5434.PachadataTraining (sa (59))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "250.optimized-locking_lock-something-else.sql - localhost,5434.PachadataTraining (sa (75))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\250.optimized-locking_lock-something-else.sql",
+              "RelativeDocumentMoniker": "250.optimized-locking_lock-something-else.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\250.optimized-locking_lock-something-else.sql - localhost,5434.PachadataTraining (sa (75))",
+              "RelativeToolTip": "250.optimized-locking_lock-something-else.sql - localhost,5434.PachadataTraining (sa (75))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T07:57:40.605Z",
+              "EditorCaption": " - localhost,5434.PachadataTraining (sa (75))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "260.optimized-locking-without LAQ.sql - localhost,5434.PachadataTraining (sa (75))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\260.optimized-locking-without LAQ.sql",
+              "RelativeDocumentMoniker": "260.optimized-locking-without LAQ.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\260.optimized-locking-without LAQ.sql - localhost,5434.PachadataTraining (sa (75))",
+              "RelativeToolTip": "260.optimized-locking-without LAQ.sql - localhost,5434.PachadataTraining (sa (75))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T07:57:24.833Z",
+              "EditorCaption": " - localhost,5434.PachadataTraining (sa (75))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "240.optimized-locking-see-tid.sql - localhost,5434.VectorDemo (sa (74))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\240.optimized-locking-see-tid.sql",
+              "RelativeDocumentMoniker": "240.optimized-locking-see-tid.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\240.optimized-locking-see-tid.sql - localhost,5434.VectorDemo (sa (74))",
+              "RelativeToolTip": "240.optimized-locking-see-tid.sql - localhost,5434.VectorDemo (sa (74))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T07:49:06.639Z",
+              "EditorCaption": " - localhost,5434.VectorDemo (sa (74))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "230.optimized-locking-tid.sql - localhost,5434.VectorDemo (sa (54))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\230.optimized-locking-tid.sql",
+              "RelativeDocumentMoniker": "230.optimized-locking-tid.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\230.optimized-locking-tid.sql - localhost,5434.VectorDemo (sa (54))",
+              "RelativeToolTip": "230.optimized-locking-tid.sql - localhost,5434.VectorDemo (sa (54))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T07:46:42.235Z",
+              "EditorCaption": " - localhost,5434.VectorDemo (sa (54))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "220.optimized-locking-without.sql - localhost,5434.VectorDemo (sa (77))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\220.optimized-locking-without.sql",
+              "RelativeDocumentMoniker": "220.optimized-locking-without.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\220.optimized-locking-without.sql - localhost,5434.VectorDemo (sa (77))",
+              "RelativeToolTip": "220.optimized-locking-without.sql - localhost,5434.VectorDemo (sa (77))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T07:44:10.474Z",
+              "EditorCaption": " - localhost,5434.VectorDemo (sa (77))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "125.vector-functions.sql - localhost,5434.VectorDemo (sa (67))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\125.vector-functions.sql",
+              "RelativeDocumentMoniker": "125.vector-functions.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\125.vector-functions.sql - localhost,5434.VectorDemo (sa (67))",
+              "RelativeToolTip": "125.vector-functions.sql - localhost,5434.VectorDemo (sa (67))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T07:19:57.89Z",
+              "EditorCaption": " - localhost,5434.VectorDemo (sa (67))"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "122.vector-content.sql - localhost,5434.VectorDemo (sa (53))",
+              "DocumentMoniker": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\122.vector-content.sql",
+              "RelativeDocumentMoniker": "122.vector-content.sql",
+              "ToolTip": "C:\\Users\\rudi\\Source\\Repos\\community\\whats-new-in-sql-server-2025\\demos\\122.vector-content.sql - localhost,5434.VectorDemo (sa (53))",
+              "RelativeToolTip": "122.vector-content.sql - localhost,5434.VectorDemo (sa (53))",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-09-06T06:37:20.04Z",
+              "EditorCaption": " - localhost,5434.VectorDemo (sa (53))"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

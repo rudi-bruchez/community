@@ -40,4 +40,8 @@ BEGIN
     FROM h
     LEFT JOIN map_values mv ON h.lock_mode = mv.map_key
     ORDER BY [count] DESC;
+
+    ALTER EVENT SESSION [OptimizedLocking] ON SERVER 
+    STATE = STOP;
+
 END

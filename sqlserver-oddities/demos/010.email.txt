@@ -1,0 +1,16 @@
+Subject: Request for new database table – Complaints from Training Attendees
+
+Hi Rudi,
+
+Could you please create a new table in the training database to help us manage the complaints we’ve been receiving from attendees?
+
+Here’s the list of columns we’d need, in the order we’d like them:
+
+<complaint_id>, <attendee_id>, <attendee_name>, <attendee_email>, <course_id>, <course_title>, <trainer_name>, <date>, <order>, <complaint_type>, <complaint_details>, <severity_level>, <status>, <resolution_notes>, <resolved_by>, <resolved_date>, <ip_address>
+
+Let me know if you think we should add or adjust anything, especially regarding data types or indexing. Once the table is created, we’ll start populating it with the backlog of complaints from the past sessions.
+
+Thanks a lot for your help on this!
+
+Best,
+Sophie

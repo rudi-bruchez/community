@@ -191,6 +191,38 @@ SELECT COUNT(*) as ValidationREGEXP
 FROM Contact.Contact
 WHERE REGEXP_LIKE(Phone, '^(\+33|0)[1-9][0-9]{8}$');
 
+-- SARGability
+
+CREATE INDEX ix_Contact_Phone ON Contact.Contact (Phone)
+-- WITH (DROP_EXISTING = ON);
+GO
+
+-- TODO : check the density vector
+SELECT COUNT(*) as ValidationREGEXP
+FROM Contact.Contact
+WHERE REGEXP_LIKE(Phone, '^(\+33|0)[1-9][0-9]{8}$');
+GO
+
+SELECT *
+FROM Contact.Contact
+WHERE REGEXP_LIKE(Phone, '^(\+33|0)[1-9][0-9]{8}$');
+GO
+
+SELECT COUNT(*) as ValidationREGEXP
+FROM Contact.Contact
+WHERE REGEXP_LIKE(Phone, '^[1-9][0-9]{8}$');
+
+SELECT COUNT(*) as ValidationREGEXP
+FROM Contact.Contact
+WHERE REGEXP_LIKE(Phone, '^06[0-9]{6}$');
+
+-- row goal ?
+SELECT TOP 10 LastName, Phone
+FROM Contact.Contact
+WHERE REGEXP_LIKE(Phone, '^(\+33|0)[1-9][0-9]{8}$');
+GO
+
+
 -- =====================================================================
 --             Advanced analysis queries
 -- =====================================================================
