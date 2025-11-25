@@ -1,0 +1,21 @@
+USE tempdb;
+GO
+
+SET QUOTED_IDENTIFIER OFF
+GO
+
+CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
+GO
+
+SELECT * FROM sys.tables WHERE name = "hello"
+
+SET QUOTED_IDENTIFIER ON;
+GO
+
+CREATE TABLE "select" ("identity" INT IDENTITY NOT NULL, "order" INT NOT NULL);
+GO
+
+SELECT * FROM sys.tables WHERE name = "hello"
+
+SET QUOTED_IDENTIFIER OFF;
+GO
