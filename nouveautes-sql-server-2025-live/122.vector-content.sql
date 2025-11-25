@@ -1,6 +1,3 @@
--- Demo: Vector Content Operations and Data Type Conversions
--- This script demonstrates how to query and inspect vector data in SQL Server 2025.
--- It shows how to check vector column properties, perform conversions, and work with JSON and VECTOR types.
 USE VectorDemo;
 GO
 
@@ -16,6 +13,7 @@ FROM dbo.verses v
 WHERE v.verse_embedding IS NOT NULL;
 
 SELECT 1544 / 4;
+-- https://learn.microsoft.com/fr-fr/sql/t-sql/data-types/float-and-real-transact-sql
 
 SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, *
 FROM INFORMATION_SCHEMA.COLUMNS
@@ -27,11 +25,9 @@ FROM sys.columns
 WHERE object_id = OBJECT_ID('verses')
 AND name = 'verse_embedding';
 
-DECLARE @v VECTOR(3) = '[1.0, 2.0, 3.0]';
-SET @v = JSON_ARRAY(1.0, 2.0, 3.0)
-
-DECLARE @json JSON = '[0.1, 0.2, 0.3]';
-DECLARE @vector VECTOR(3) = CAST(@json AS VECTOR(3));
-
-SELECT @v, @json, @vector;
+SELECT TOP 1 *,
+	VECTORPROPERTY([verse_embedding], 'dimensions') as [dimensions],
+	VECTORPROPERTY([verse_embedding], 'BaseType') as [base type], -- always float (32 bit) for now,
+	VECTOR_NORMALIZE ([verse_embedding], 'norm2' ) as [normalisé]
+FROM [dbo].[verses];
 GO
